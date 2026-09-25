@@ -1245,3 +1245,93 @@ footer {
         margin-bottom: 10px;
     }
 }
+/* --- SEZIONE ROSA SQUADRA (CARD LAYOUT VERDE) --- */
+.sezione-squadra {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #0a0a0a;
+}
+
+.titolo-sezione {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.sottotitolo-sezione {
+  color: #aaaaaa;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.grid-giocatori {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.card-giocatore {
+  position: relative;
+  background: #161616;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #262626;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-giocatore:hover {
+  transform: translateY(-8px);
+  border-color: #00a859; /* Verde principale */
+  box-shadow: 0 10px 20px rgba(0, 168, 89, 0.2);
+}
+
+.numero-maglia {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.12);
+  z-index: 1;
+}
+
+.foto-contenitore {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background-color: #111111;
+}
+
+.foto-contenitore img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info-giocatore {
+  padding: 18px 15px;
+  background: #111111;
+  text-align: left;
+  border-top: 3px solid #00a859; /* Linea verde */
+}
+
+.ruolo {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #00a859; /* Ruolo in verde */
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.nome-giocatore {
+  color: #ffffff;
+  font-size: 1.15rem;
+  margin: 4px 0 0 0;
+  font-weight: 800;
+}
