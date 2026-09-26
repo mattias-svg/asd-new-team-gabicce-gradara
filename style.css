@@ -1428,3 +1428,12 @@ footer {
   object-fit: contain; /* Mantiene le proporzioni senza distorcerlo */
   filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.5)); /* Ombra leggera */
 }
+/* Rimuove cerchi, sfondi e bordi dai loghi */
+.squadra-item img,
+.logo-squadra {
+  background: none !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
