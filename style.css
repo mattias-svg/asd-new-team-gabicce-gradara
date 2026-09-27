@@ -1444,17 +1444,19 @@ footer {
     object-fit: cover;
     border-radius: 8px;
 }
-/* Stile diretto per le immagini della gallery */
-.foto-gallery {
-    width: 100% !important;
-    height: 250px !important;       /* Cambia questo valore per regolare l'altezza desiderata */
-    object-fit: cover !important;   /* Evita che l'immagine si distorca */
-    object-position: center !important; /* Taglia equamente la parte superiore e inferiore */
-    display: block !important;
+/* Ripristina l'altezza del contenitore padre */
+section:nth-of-type(6) > div:last-child > div {
+    height: 100% !important;
+    min-height: 250px; /* Garantisce una dimensione minima adeguata */
+    overflow: hidden !important;
 }
 
-/* Sblocca l'altezza del contenitore padre se era bloccata dal tema */
-section:nth-of-type(6) > div:last-child > div {
-    height: auto !important;
-    overflow: hidden !important;
+/* L'immagine riempie al 100% la larghezza e l'altezza del suo riquadro */
+.foto-gallery,
+section:nth-of-type(6) > div:last-child img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;     /* Riempie tutto lo spazio senza distorcere l'immagine */
+    object-position: center !important;  /* Centra l'inquadratura tagliando sia sopra che sotto */
+    display: block !important;
 }
