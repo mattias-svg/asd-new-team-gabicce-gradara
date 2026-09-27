@@ -1446,8 +1446,8 @@ footer {
 }
 /* Limita l'altezza delle immagini nella gallery e taglia il fondo */
 main section:nth-of-type(6) img {
-    height: 200px; /* Cambia 300px con l'altezza massima che preferisci */
-    width: 100%;
-    object-fit: cover; /* Mantiene le proporzioni corrette */
-    object-position: center; /* Inquadra la parte superiore e taglia la parte in basso */
+    height: 200px !important; /* Cambia 300px con l'altezza massima che preferisci */
+    width: 100% !important;
+    object-fit: cover !important; /* Mantiene le proporzioni corrette */
+    object-position: center !important; /* Inquadra la parte superiore e taglia la parte in basso */
 }
