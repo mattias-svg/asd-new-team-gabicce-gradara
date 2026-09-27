@@ -1444,10 +1444,17 @@ footer {
     object-fit: cover;
     border-radius: 8px;
 }
-/* Limita l'altezza delle immagini nella gallery e taglia il fondo */
-main section:nth-of-type(6) img {
-    height: 200px !important; /* Cambia 300px con l'altezza massima che preferisci */
+/* Stile diretto per le immagini della gallery */
+.foto-gallery {
     width: 100% !important;
-    object-fit: cover !important; /* Mantiene le proporzioni corrette */
-    object-position: center !important; /* Inquadra la parte superiore e taglia la parte in basso */
+    height: 250px !important;       /* Cambia questo valore per regolare l'altezza desiderata */
+    object-fit: cover !important;   /* Evita che l'immagine si distorca */
+    object-position: center !important; /* Taglia equamente la parte superiore e inferiore */
+    display: block !important;
+}
+
+/* Sblocca l'altezza del contenitore padre se era bloccata dal tema */
+section:nth-of-type(6) > div:last-child > div {
+    height: auto !important;
+    overflow: hidden !important;
 }
