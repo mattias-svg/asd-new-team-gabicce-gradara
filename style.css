@@ -1443,20 +1443,19 @@ footer {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-}
-/* Ripristina l'altezza del contenitore padre */
+/* 1. Forza tutti i riquadri della gallery ad avere la stessa altezza */
 section:nth-of-type(6) > div:last-child > div {
-    height: 100% !important;
-    min-height: 250px; /* Garantisce una dimensione minima adeguata */
+    height: 300px !important;  /* Fissa un'altezza uniforme per tutti i box */
+    min-height: 300px !important;
     overflow: hidden !important;
 }
 
-/* L'immagine riempie al 100% la larghezza e l'altezza del suo riquadro */
+/* 2. Adatta l'immagine al box tagliando proporzionalmente sopra e sotto */
 .foto-gallery,
 section:nth-of-type(6) > div:last-child img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important;     /* Riempie tutto lo spazio senza distorcere l'immagine */
-    object-position: center !important;  /* Centra l'inquadratura tagliando sia sopra che sotto */
+    object-fit: cover !important;        /* Mantiene le proporzioni corrette */
+    object-position: center !important;   /* Centra il soggetto della foto */
     display: block !important;
 }
