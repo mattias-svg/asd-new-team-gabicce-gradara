@@ -1459,3 +1459,162 @@ section:nth-of-type(6) > div:last-child img {
     object-position: center !important;   /* Centra il soggetto della foto */
     display: block !important;
 }
+/* ==========================================
+   STILE MODALE FORMAZIONE (Verde, Nero, Oro, Bianco)
+   ========================================== */
+
+/* Finestra Overlay a schermo intero */
+.modal-formazione {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 40px 20px;
+}
+
+/* Contenitore interno */
+.modal-contenuto {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #0b0e0c;
+    border: 1px solid #ffd700;
+    border-radius: 16px;
+    padding: 40px 20px;
+}
+
+/* Pulsante X di chiusura */
+.btn-chiudi-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #ffd700;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-chiudi-modal:hover {
+    color: #00ff66;
+}
+
+/* Intestazione Formazione */
+.formazione-header { 
+    text-align: center; 
+    margin-bottom: 30px; 
+}
+
+.formazione-header p { 
+    color: #00ff66; 
+    font-size: 14px; 
+    font-weight: 700; 
+    letter-spacing: 2px; 
+}
+
+.formazione-header h2 { 
+    color: #ffffff; 
+    font-size: 32px; 
+    font-weight: 900; 
+}
+
+.formazione-header h2 span { 
+    color: #ffd700; 
+}
+
+.modulo-badge { 
+    display: inline-block; 
+    background: #008037; 
+    color: #ffffff; 
+    padding: 6px 16px; 
+    border-radius: 20px; 
+    font-weight: bold; 
+    border: 1px solid #ffd700; 
+}
+
+/* Gruppi e Titoli Ruoli */
+.ruolo-gruppo { 
+    margin-bottom: 30px; 
+}
+
+.ruolo-titolo { 
+    color: #ffd700; 
+    font-size: 20px; 
+    border-bottom: 2px solid #008037; 
+    padding-bottom: 8px; 
+    margin-bottom: 15px; 
+}
+
+/* Griglia e Schede Giocatori */
+.griglia-giocatori { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    gap: 15px; 
+}
+
+.scheda-giocatore { 
+    position: relative; 
+    background: #141916; 
+    border: 1px solid #1f2a23; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.scheda-giocatore:hover {
+    transform: translateY(-5px);
+    border-color: #ffd700;
+}
+
+.numero-maglia { 
+    position: absolute; 
+    top: 5px; 
+    right: 10px; 
+    font-size: 40px; 
+    font-weight: 900; 
+    color: rgba(255, 215, 0, 0.25); 
+}
+
+.foto-giocatore { 
+    height: 180px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background: radial-gradient(circle, #1e2922 0%, #0d120f 100%); 
+    padding: 10px; 
+}
+
+.foto-giocatore img { 
+    max-height: 100%; 
+    max-width: 100%; 
+    object-fit: contain; 
+}
+
+.info-giocatore { 
+    padding: 12px; 
+    background-color: #111613; 
+    border-top: 2px solid #008037; 
+}
+
+.ruolo-tag { 
+    font-size: 10px; 
+    background-color: #ffd700; 
+    color: #000000; 
+    font-weight: 800; 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    display: inline-block; 
+    margin-bottom: 4px; 
+}
+
+.nome-giocatore { 
+    color: #ffffff; 
+    font-size: 15px; 
+    font-weight: 800; 
+    margin: 0; 
+}
