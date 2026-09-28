@@ -724,24 +724,30 @@
     </div>
 </div>
 
-<!-- SCRIPT PER APRIRE E CHIUDERE LA MODALE -->
 <script>
 function apriFormazione() {
-    document.getElementById("modalFormazione").style.display = "block";
-    document.body.style.overflow = "hidden";
+    var modal = document.getElementById("modalFormazione");
+    if (modal) {
+        modal.classList.add("attiva");
+        document.body.classList.add("modal-aperta");
+    }
 }
 
 function chiudiFormazione() {
-    document.getElementById("modalFormazione").style.display = "none";
-    document.body.style.overflow = "auto";
-}
-
-window.onclick = function(event) {
     var modal = document.getElementById("modalFormazione");
-    if (event.target == modal) {
-        chiudiFormazione();
+    if (modal) {
+        modal.classList.remove("attiva");
+        document.body.classList.remove("modal-aperta");
     }
 }
+
+// Chiudi la schermata cliccando sullo sfondo scuro
+window.addEventListener("click", function(event) {
+    var modal = document.getElementById("modalFormazione");
+    if (event.target === modal) {
+        chiudiFormazione();
+    }
+});
 </script>
 </body>
 </html>
