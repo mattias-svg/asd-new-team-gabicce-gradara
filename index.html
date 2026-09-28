@@ -31,7 +31,7 @@
         </a>
 
         <nav>
-            <a href="#squadra">Squadra</a>
+            <a href="javascript:void(0)" onclick="apriFormazione()" class="btn-apri-formazione">Formazione</a>
             <a href="#results">Calendario</a>
             <a href="#news">News</a>
             <a href="#gallery">Gallery</a>
@@ -616,6 +616,132 @@
         </p>
 
     </footer>
+<!-- FINESTRA OVERLAY FORMAZIONE (STILE AC MILAN) -->
+<div id="modalFormazione" class="modal-formazione">
+    <div class="modal-contenuto">
+        <!-- Tasto di chiusura X -->
+        <span class="btn-chiudi-modal" onclick="chiudiFormazione()">&times;</span>
 
+        <!-- Intestazione -->
+        <div class="formazione-header">
+            <p>ROSA UFFICIALE</p>
+            <h2>FORMAZIONE <span>IN CAMPO</span></h2>
+            <div class="modulo-badge">MODULO 3 - 3 - 1</div>
+        </div>
+
+        <!-- PORTIERI -->
+        <div class="ruolo-gruppo">
+            <h3 class="ruolo-titolo">PORTIERI</h3>
+            <div class="griglia-giocatori">
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">1</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="G. Salvatori"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">POR</span>
+                        <h4 class="nome-giocatore">G. SALVATORI</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIFENSORI -->
+        <div class="ruolo-gruppo">
+            <h3 class="ruolo-titolo">DIFENSORI</h3>
+            <div class="griglia-giocatori">
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">2</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="A. Shark"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">DIF</span>
+                        <h4 class="nome-giocatore">A. SHARK</h4>
+                    </div>
+                </div>
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">5</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="M. Ferrari"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">DIF</span>
+                        <h4 class="nome-giocatore">M. FERRARI</h4>
+                    </div>
+                </div>
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">3</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="T. Salvatori"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">DIF</span>
+                        <h4 class="nome-giocatore">T. SALVATORI</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CENTROCAMPISTI -->
+        <div class="ruolo-gruppo">
+            <h3 class="ruolo-titolo">CENTROCAMPISTI</h3>
+            <div class="griglia-giocatori">
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">8</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="S. Ricci"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">CEN</span>
+                        <h4 class="nome-giocatore">S. RICCI</h4>
+                    </div>
+                </div>
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">4</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="D. Conti"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">CEN</span>
+                        <h4 class="nome-giocatore">D. CONTI</h4>
+                    </div>
+                </div>
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">10</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="F. Marini"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">CEN</span>
+                        <h4 class="nome-giocatore">F. MARINI</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ATTACCANTI -->
+        <div class="ruolo-gruppo">
+            <h3 class="ruolo-titolo">ATTACCANTI</h3>
+            <div class="griglia-giocatori">
+                <div class="scheda-giocatore">
+                    <div class="numero-maglia">9</div>
+                    <div class="foto-giocatore"><img src="logo.png" alt="L. Verdi"></div>
+                    <div class="info-giocatore">
+                        <span class="ruolo-tag">ATT</span>
+                        <h4 class="nome-giocatore">L. VERDI</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- SCRIPT PER APRIRE E CHIUDERE LA MODALE -->
+<script>
+function apriFormazione() {
+    document.getElementById("modalFormazione").style.display = "block";
+    document.body.style.overflow = "hidden";
+}
+
+function chiudiFormazione() {
+    document.getElementById("modalFormazione").style.display = "none";
+    document.body.style.overflow = "auto";
+}
+
+window.onclick = function(event) {
+    var modal = document.getElementById("modalFormazione");
+    if (event.target == modal) {
+        chiudiFormazione();
+    }
+}
+</script>
 </body>
 </html>
